@@ -7,3 +7,6 @@ export const LearningpageGetHandler = (_: Request, res: Response) => {
 export const HomePageGetHandler = (_: Request, res: Response) => {
     res.render('HomePage');
 };
+export const VideoPageGetHandler = (_: Request, res: Response) => {
+    res.render('video');
+};
