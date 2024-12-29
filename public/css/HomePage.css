@@ -25,20 +25,23 @@ h1 {
     color: #f77700;
 }
 
-
 #searchBar {
-    width: 98%;
+    width: 100%; /* Adjusted to take full width of the container */
+    max-width: 98%; /* To maintain some spacing */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #c30707;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 #mediaList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(209px, 1fr)); /* Ensure the columns are responsive */
+    gap: 20px; /* Adjusted to reduce large gaps */
+    margin: 0;
+    padding: 0;
 }
 
 .media-item {
@@ -51,6 +54,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     transition: transform 0.1s;
+    height: 100%; /* Added to ensure consistent sizing */
 }
 
 .media-item:hover {
@@ -63,7 +67,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: normal;
+    align-items: flex-start; /* Fixed this from normal to flex-start for proper alignment */
 }
 
 .media-title {
@@ -80,6 +84,8 @@ h1 {
 }
 
 audio, video {
-    width: 87%;
-    outline: auto;
+    width: 87%; /* Reduced slightly to fit well inside */
+    outline: none; /* Clean up outline style */
+    margin: 10px 0; /* Add space between audio/video and surrounding elements */
+    max-width: 100%; /* Make sure the media fits container size */
 }
